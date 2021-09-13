@@ -45,7 +45,7 @@ var SEPs = [
     code: '(MA) OEP',
     name: 'MA Open Enrollment Period',
     description: [
-      'Beneficiaries already enrolled in a Medicare Advantageplan(MA/MAPD)may make one plan change during the first three (3) months of each year (1/1-3/31) to enroll in another Medicare Advantage plan OR to disenroll to obtain Original Medicare (and get a PDP).',
+      'Beneficiaries already enrolled in a Medicare Advantage plan (MA/MAPD) may make one plan change during the first three (3) months of each year (1/1-3/31) to enroll in another Medicare Advantage plan OR to disenroll to obtain Original Medicare (and get a PDP).',
       'The effective date will be the first day of the month following receipt of the enrollment or disenrollment request. MA/MAPD member NOT required to have made an election during AEP.',
       'ONLY MA/MAPD -> MA/MAPD (not original medicare -> mapd nor pdp -> pdp'
     ],
@@ -58,7 +58,8 @@ var SEPs = [
     code: 'MA OEP-New',
     name: 'MA Open Enrollment Period-New',
     description: [
-      'OEP but for people who enrolled in a plan during their IEP, NOTE:  Beneficiaries who wait to use their IEP/ICEP until the month of their Medicare effective date or later during that initial seven-month window will reduce or even forfeit their OEP.'
+      'OEP but for people who enrolled in a plan during their IEP',
+      'NOTE:  Beneficiaries who wait to use their IEP/ICEP until the month of their Medicare effective date or later during that initial seven-month window will reduce or even forfeit their OEP.'
     ],
     timePeriod: [
       'The month of Medicare entitlement and for 2 additional months following IEP/ICEP enrollment into MA/MAPD'
@@ -74,7 +75,7 @@ var SEPs = [
       'This is an open and unlimited use enrollment period for Medicare beneficiaries residing in an institution lasting for up to two (2) months after leaving the facility.',
       'An “institution” is defined as a skilled nursing facility, nursing home, intermediate care facility for the mentally disabled, psychiatric hospital, rehabilitation hospital or long term care hospital (it does NOT include assisted living facilities or residential homes). '
     ],
-    timePeriod: ['up to two (2) months after leaving the facility.'],
+    timePeriod: ['Up to two (2) months after leaving the facility.'],
     enrollMA: true,
     enrollMAPD: true,
     enrollPDP: false

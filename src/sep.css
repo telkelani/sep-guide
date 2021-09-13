@@ -26,13 +26,24 @@
 
 .modal-header {
   position: relative;
+  text-align: center;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.description-title {
+  font-size: large;
+  text-decoration: underline;
 }
 .modal-footer {
-  margin: 10px 10px;
+  margin: 15px 15px;
   border-color: rgb(115, 211, 144);
   border-style: solid;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 5px 5px gold;
+  box-shadow: 5px 5px rgb(13, 150, 160);
+  text-align: center;
 }
 
 .modal-close-button {

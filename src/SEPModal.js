@@ -86,7 +86,7 @@ function SEPModal({ SEP, showModal, closeModal }) {
         </div>
 
         <div className="modal-body">
-          <p>Description</p>
+          <p className="description-title">Description</p>
           {SEP.description.map(line => (
             <p>{line}</p>
           ))}
