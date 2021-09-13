@@ -10,6 +10,11 @@ button {
   font-weight: 800;
 }
 
+#title-section {
+  text-align: center;
+  padding: 5% 5%;
+  font-size: xx-large;
+}
 body {
   background-color: rgba(19, 163, 96, 0.5);
 }
@@ -25,12 +30,30 @@ body {
 
 .sep-buttons:hover {
   cursor: pointer;
-  background: rgb(49, 179, 49);
-  color: black;
+  animation-name: sep-buttons-hover;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
 }
 
 #top-part {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+}
+
+@keyframes sep-buttons-hover {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    background: rgb(26, 235, 130);
+    color: black;
+    transform: scale(1);
+  }
 }

@@ -47,6 +47,9 @@ export default function App() {
   };
   return (
     <div>
+      <div id="title-section">
+        <h1 className="page-title">SEP GUIDE</h1>
+      </div>
       <div className="sep-group">
         {SEPs.map(SEP => (
           <button

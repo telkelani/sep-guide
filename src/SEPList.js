@@ -190,7 +190,7 @@ var SEPs = [
       'This SEP exists for members who will be affected by a termination of contractthat occurs mid-year.'
     ],
     timePeriod: [
-      'SEP begins the month of   the termination effective date and ends two months after the effective date of the termination.'
+      'SEP begins the month of the termination effective date and ends two months after the effective date of the termination.'
     ],
     enrollMA: true,
     enrollMAPD: true,
@@ -282,7 +282,7 @@ var SEPs = [
     code: 'LAW',
     name: 'Non US Citizens that become lawfully present',
     description: [
-      'CMS providesa SEPfor non-U.S. citizens who become lawfully present in the United States',
+      'CMS provides a SEP for non-U.S. citizens who become lawfully present in the United States',
       'Applicants are NOT required to provide evidence of U.S. citizenship or lawful presence status with the enrollment request and plans are NOT permitted to request/require such information or documentation. '
     ],
     timePeriod: [
