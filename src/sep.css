@@ -13,7 +13,7 @@
 }
 
 .modal-content {
-  width: 80%;
+  width: 85%;
   background-color: rgb(110, 167, 212);
   opacity: 90%;
   border-radius: 23px 23px 23px 23px;
@@ -31,10 +31,30 @@
   border-color: rgb(115, 211, 144);
   border-style: solid;
   border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 5px gold;
 }
 
 .modal-close-button {
   position: absolute;
   right: 0;
   top: 0;
+  background: rgba(255, 10, 10, 0.795);
+  border-style: none;
+  border-radius: 25px 25px 25px 25px;
+  width: 20%;
+}
+
+.modal-close-button:hover {
+  cursor: pointer;
+  animation-name: close_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes close_animation {
+  to {
+    background: rgb(228, 159, 12);
+  }
 }

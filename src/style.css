@@ -10,15 +10,20 @@ button {
   font-weight: 800;
 }
 
-.buttons {
+body {
+  background-color: rgba(19, 163, 96, 0.5);
+}
+
+.sep-buttons {
   background: rgb(121, 162, 224);
   border-style: none;
   color: aliceblue;
   border-radius: 10px 10px 10px 10px;
-  width: 23%;
+  width: 25%;
+  font-size: x-large;
 }
 
-.buttons:hover {
+.sep-buttons:hover {
   cursor: pointer;
   background: rgb(49, 179, 49);
   color: black;

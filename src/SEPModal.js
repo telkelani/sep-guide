@@ -86,11 +86,18 @@ function SEPModal({ SEP, showModal, closeModal }) {
         </div>
 
         <div className="modal-body">
-          <p>{SEP.description}</p>
+          <p>Description</p>
+          {SEP.description.map(line => (
+            <p>{line}</p>
+          ))}
         </div>
 
         <div className="modal-footer">
-          <p>Enrollment period: {SEP.timePeriod}</p>
+          <p>Enrollment Period</p>
+          {SEP.timePeriod.map(line => {
+            return <p>{line}</p>;
+          })}
+
           <h3>Can enroll in</h3>
           <PlanEnroll />
         </div>
