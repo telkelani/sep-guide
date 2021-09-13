@@ -1,0 +1,40 @@
+.sep-group {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#modal {
+  position: fixed;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 80%;
+  background-color: rgb(110, 167, 212);
+  opacity: 90%;
+  border-radius: 23px 23px 23px 23px;
+  box-shadow: 5px 5px black;
+  border-style: solid;
+  border-width: 5px;
+  border-color: aquamarine;
+}
+
+.modal-header {
+  position: relative;
+}
+.modal-footer {
+  margin: 10px 10px;
+  border-color: rgb(115, 211, 144);
+  border-style: solid;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

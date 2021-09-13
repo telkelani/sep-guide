@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Balsamiq+Sans:ital@1&display=swap');
+h1,
+p,
+h2,
+h3,
+label,
+button {
+  margin: 10px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+}
+
+.buttons {
+  background: rgb(121, 162, 224);
+  border-style: none;
+  color: aliceblue;
+  border-radius: 10px 10px 10px 10px;
+  width: 23%;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  background: rgb(49, 179, 49);
+  color: black;
+}
+
+#top-part {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
