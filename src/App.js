@@ -9,7 +9,7 @@ export default function App() {
   var [selectedSEP, setselectedSEP] = useState(null);
 
   $(document).ready(() => {
-    window.onclick = e => {
+    var func = e => {
       if (e.target.className == 'sep-buttons') {
         $('.sep-buttons').click(e => {
           selectSEP(e);
@@ -20,6 +20,9 @@ export default function App() {
       if ($(e.target).closest('.modal-content').length == 0) {
         closeModal();
       }
+    };
+    window.onclick = e => {
+      func(e);
     };
   });
 
