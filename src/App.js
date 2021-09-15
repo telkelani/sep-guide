@@ -7,21 +7,6 @@ export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
 
-  // window.onclick = e => {
-  //   console.log('CLICKED');
-  //   if (e.target.className == 'sep-buttons') {
-  //     $('.sep-buttons').click(e => {
-  //       console.log(e.target.textContent);
-  //       selectSEP(e);
-  //       $('#modal').css('display', 'flex');
-  //     });
-  //     return;
-  //   }
-  //   if ($(e.target).closest('.modal-content').length == 0) {
-  //     closeModal();
-  //   }
-  // };
-
   var openModal = () => {
     setShowModal(() => {
       showModal = true;

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Balsamiq+Sans:ital@1&display=swap');
 h1,
-p,
 h2,
 h3,
 label,
@@ -8,6 +7,13 @@ button {
   margin: 10px;
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
+  font-size: xx-large;
+}
+p {
+  margin: 10px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: x-large;
 }
 
 #title-section {
