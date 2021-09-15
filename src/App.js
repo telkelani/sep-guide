@@ -15,7 +15,6 @@ export default function App() {
         console.log(e.target.textContent);
         selectSEP(e);
       });
-      return;
     }
     if ($(e.target).closest('.modal-content').length == 0) {
       closeModal();
