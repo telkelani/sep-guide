@@ -8,8 +8,6 @@ export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
 
-  window.$ = document.querySelectorAll.bind(document);
-
   window.onclick = e => {
     if (e.target.className == 'sep-buttons') {
       $('.sep-buttons').click(e => {
