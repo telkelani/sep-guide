@@ -14,7 +14,9 @@ export default function App() {
       $('.sep-buttons').click(e => {
         console.log(e.target.textContent);
         selectSEP(e);
+        $('#modal').css('display', 'flex');
       });
+      return;
     }
     if ($(e.target).closest('.modal-content').length == 0) {
       closeModal();
