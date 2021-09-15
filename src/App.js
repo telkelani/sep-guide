@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
-import $ from 'jquery';
 import SEPs from './SEPList';
 import SEPModal from './SEPModal';
 
-window.$ = window.jQuery = require('jquery');
 export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
