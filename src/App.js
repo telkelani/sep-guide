@@ -8,7 +8,7 @@ export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
 
-  window.onclick = e => {
+  $(window).click(e => {
     if (e.target.className == 'sep-buttons') {
       $('.sep-buttons').click(e => {
         selectSEP(e);
@@ -19,7 +19,7 @@ export default function App() {
     if ($(e.target).closest('.modal-content').length == 0) {
       closeModal();
     }
-  };
+  });
 
   var openModal = () => {
     setShowModal(() => {
