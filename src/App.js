@@ -4,25 +4,25 @@ import $ from 'jquery';
 import SEPs from './SEPList';
 import SEPModal from './SEPModal';
 
+window.$ = window.jQuery = require('jquery');
 export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
-  window.$ = window.jQuery = require('jquery');
 
-  window.onclick = e => {
-    console.log('CLICKED');
-    if (e.target.className == 'sep-buttons') {
-      $('.sep-buttons').click(e => {
-        console.log(e.target.textContent);
-        selectSEP(e);
-        $('#modal').css('display', 'flex');
-      });
-      return;
-    }
-    if ($(e.target).closest('.modal-content').length == 0) {
-      closeModal();
-    }
-  };
+  // window.onclick = e => {
+  //   console.log('CLICKED');
+  //   if (e.target.className == 'sep-buttons') {
+  //     $('.sep-buttons').click(e => {
+  //       console.log(e.target.textContent);
+  //       selectSEP(e);
+  //       $('#modal').css('display', 'flex');
+  //     });
+  //     return;
+  //   }
+  //   if ($(e.target).closest('.modal-content').length == 0) {
+  //     closeModal();
+  //   }
+  // };
 
   var openModal = () => {
     setShowModal(() => {
@@ -31,7 +31,7 @@ export default function App() {
     });
   };
 
-  var closeModal = () => {
+  var closeModal = e => {
     setShowModal(() => {
       showModal = false;
       return showModal;

@@ -1,9 +1,17 @@
 import React from 'react';
 
 import './sep.css';
-import $ from 'jquery';
 
 function SEPModal({ SEP, showModal, closeModal }) {
+  window.onclick = e => {
+    console.log(e.target.closest('#modal-content'));
+    if (e.target.className == 'sep-buttons') {
+      return;
+    }
+    if (e.target.closest('#modal-content') == null) {
+      closeModal(e);
+    }
+  };
   if (SEP === null) {
     return null;
   }
@@ -76,7 +84,7 @@ function SEPModal({ SEP, showModal, closeModal }) {
 
   return (
     <div id="modal">
-      <div className="modal-content">
+      <div id="modal-content">
         <div className="modal-header">
           <h1>{SEP.code}</h1>
           <h2>{SEP.name}</h2>
