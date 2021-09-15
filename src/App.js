@@ -7,6 +7,7 @@ import SEPModal from './SEPModal';
 export default function App() {
   var [showModal, setShowModal] = useState(false);
   var [selectedSEP, setselectedSEP] = useState(null);
+  window.$ = window.jQuery = require('jquery');
 
   window.onclick = e => {
     console.log('CLICKED');
