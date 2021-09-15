@@ -16,7 +16,7 @@
 #modal-content {
   width: 85%;
   background-color: rgb(110, 167, 212);
-  opacity: 90%;
+  opacity: 1;
   border-radius: 23px 23px 23px 23px;
   box-shadow: 5px 5px black;
   border-style: solid;
