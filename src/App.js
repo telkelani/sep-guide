@@ -14,7 +14,7 @@ export default function App() {
       $('.sep-buttons').click(e => {
         console.log(e.target.textContent);
         selectSEP(e);
-        $('#modal').show();
+        $('#modal').css('visibility', 'visible');
       });
       return;
     }

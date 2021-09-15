@@ -11,6 +11,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .modal-content {
