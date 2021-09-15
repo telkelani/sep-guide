@@ -9,6 +9,7 @@ export default function App() {
   var [selectedSEP, setselectedSEP] = useState(null);
 
   window.onclick = e => {
+    console.log('CLICKED');
     if (e.target.className == 'sep-buttons') {
       $('.sep-buttons').click(e => {
         selectSEP(e);
