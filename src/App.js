@@ -12,6 +12,7 @@ export default function App() {
     console.log('CLICKED');
     if (e.target.className == 'sep-buttons') {
       $('.sep-buttons').click(e => {
+        console.log(e.target.textContent);
         selectSEP(e);
         $('#modal').show();
       });
