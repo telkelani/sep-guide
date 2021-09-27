@@ -4,6 +4,7 @@
   flex-flow: row wrap;
 }
 
+/* Overlay */
 #modal {
   position: fixed;
   top: 5%;
@@ -13,6 +14,7 @@
   align-items: center;
 }
 
+/* The content */
 #modal-content {
   width: 85%;
   background-color: rgb(110, 167, 212);
