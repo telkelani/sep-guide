@@ -15,13 +15,25 @@ var SEPs = [
     enrollPDP: true
   },
   {
-    code: 'ICEP',
+    code: 'ICEP (Same A&B)',
     name: 'Initial Coverage Enrollment Period',
     description: [
-      'ICEP is for Medical-only coverage (MA-only), not MAPD or PDP'
+      'ICEP is for Medical-only coverage (MA-only)'
     ],
     timePeriod: [
-      'Same part A&B: 3 months before part A and B effective Date, month of effective date and 3 months after effective date (3-1-3).',
+      'Same part A&B: 3 months before part A and B effective Date, month of effective date and 3 months after effective date (3-1-3).'
+    ],
+    enrollMA: true,
+    enrollMAPD: true,
+    enrollPDP: false
+  },
+  {
+    code: 'ICEP (Delayed B)',
+    name: 'Initial Coverage Enrollment Period',
+    description: [
+      'ICEP is for Medical-only coverage (MA-only)'
+    ],
+    timePeriod: [
       'Delayed Part B: 3 months prior to effective date'
     ],
     enrollMA: true,
@@ -183,20 +195,7 @@ var SEPs = [
     enrollMAPD: true,
     enrollPDP: true
   },
-  {
-    code: 'OTH',
-    name: 'Mutual Termination',
-    description: [
-      'Termination of contract with CMS (or mutual termination of contract with CMS)',
-      'This SEP exists for members who will be affected by a termination of contractthat occurs mid-year.'
-    ],
-    timePeriod: [
-      'SEP begins the month of the termination effective date and ends two months after the effective date of the termination.'
-    ],
-    enrollMA: true,
-    enrollMAPD: true,
-    enrollPDP: true
-  },
+  
   {
     code: 'SNP',
     name: 'Loss of Special Needs Status',
