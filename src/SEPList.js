@@ -24,7 +24,7 @@ var SEPs = [
       'Same part A&B: 3 months before part A and B effective Date, month of effective date and 3 months after effective date (3-1-3).'
     ],
     enrollMA: true,
-    enrollMAPD: true,
+    enrollMAPD: false,
     enrollPDP: false
   },
   {
@@ -37,7 +37,7 @@ var SEPs = [
       'Delayed Part B: 3 months prior to effective date'
     ],
     enrollMA: true,
-    enrollMAPD: false,
+    enrollMAPD: true,
     enrollPDP: false
   },
   {
