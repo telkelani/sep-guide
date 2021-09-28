@@ -3,6 +3,8 @@ import './style.css';
 import SEPs from './SEPList';
 import SEPModal from './SEPModal';
 
+import 'animate.css';
+
 export default function App() {
   //state variables for Modal
   var [showModal, setShowModal] = useState(false);
@@ -58,7 +60,27 @@ export default function App() {
           showModal={showModal}
           closeModal={closeModal}
         />
-      </div>
+        </div>
+
+        <h1 id="hierarchy-title">SEP Hierarchy</h1>
+        <div className="hierarchy">
+          <div className="animate__animated animate__swing hierarchy-box" id="box1">
+            1. IEP
+          </div>
+          <div className="animate__animated animate__swing hierarchy-box" id="box2">
+            2. (MA)OEP/OEP-New
+          </div>
+          <div className="animate__animated animate__swing hierarchy-box" id="box3">
+            3. SEP
+          </div>
+          <div className="animate__animated animate__swing hierarchy-box" id="box4">
+            4. AEP
+          </div>
+          <div className="animate__animated animate__swing hierarchy-box" id="box5">
+            5. OEP-I
+          </div>
+        </div>
+      
     </div>
   );
 }
