@@ -57,7 +57,7 @@ function InitialEnrollment() {
     //Overlap on end of year (part B month Oct - Dec)
     else if (partB.getUTCMonth() >= 9) {
       if (todayYearAfterB) {
-        console.log(monthDiff)
+        console.log(monthDiff);
         if (monthDiff <= 11 && monthDiff >= 9) {
           valid = true;
         }
@@ -180,7 +180,9 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partA}
-            onChange={(date) => setPartA(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
+            onChange={(date) =>
+              setPartA(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))
+            }
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
@@ -191,7 +193,9 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partB}
-            onChange={(date) => setPartB(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
+            onChange={(date) =>
+              setPartB(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))
+            }
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
@@ -202,7 +206,9 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partD}
-            onChange={(date) => setPartD(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
+            onChange={(date) =>
+              setPartD(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))
+            }
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
@@ -278,11 +284,19 @@ function InitialEnrollment() {
         </button>
       </div>
       <ShowResult />
-
-      <div style={{display: 'flex', flexDirection:'column', justifyContent:'center', alignItems: 'center', marginTop: '20px'}}>
+{/* 
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '20px',
+        }}
+      >
         <h3>IEP vs ICEP chart for reference</h3>
-        <img src="https://hovisandassociates.com/wp-content/uploads/2020/07/plan-chart.jpg" width="50%" />
-      </div>
+
+      </div> */}
     </div>
   );
 }
