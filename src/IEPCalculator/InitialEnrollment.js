@@ -57,6 +57,7 @@ function InitialEnrollment() {
     //Overlap on end of year (part B month Oct - Dec)
     else if (partB.getUTCMonth() >= 9) {
       if (todayYearAfterB) {
+        console.log(monthDiff)
         if (monthDiff <= 11 && monthDiff >= 9) {
           valid = true;
         }
@@ -179,7 +180,7 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partA}
-            onChange={(date) => setPartA(date)}
+            onChange={(date) => setPartA(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
@@ -190,7 +191,7 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partB}
-            onChange={(date) => setPartB(date)}
+            onChange={(date) => setPartB(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
@@ -201,7 +202,7 @@ function InitialEnrollment() {
           <DatePicker
             className="date-input"
             selected={partD}
-            onChange={(date) => setPartD(date)}
+            onChange={(date) => setPartD(new Date(date.getUTCFullYear(), date.getUTCMonth(), 1))}
             dateFormat="MM/01/yyyy"
             showMonthYearPicker
           />
