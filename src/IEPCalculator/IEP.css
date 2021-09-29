@@ -19,6 +19,7 @@ body {
   border-radius: 23px 23px 23px 23px;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   color: white;
   font-family: 'Overpass Mono', monospace;
 }

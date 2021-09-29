@@ -277,6 +277,11 @@ function InitialEnrollment() {
         </button>
       </div>
       <ShowResult />
+
+      <div style={{display: 'flex', flexDirection:'column', justifyContent:'center', alignItems: 'center', marginTop: '20px'}}>
+        <h3>IEP vs ICEP chart for reference</h3>
+        <img src="https://hovisandassociates.com/wp-content/uploads/2020/07/plan-chart.jpg" width="50%" />
+      </div>
     </div>
   );
 }

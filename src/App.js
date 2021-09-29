@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import './style.css';
 import SEPs from './SEPList';
 import SEPModal from './SEPModal';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import InitialEnrollment from './IEPCalculator/InitialEnrollment.js'
 
 import 'animate.css';
 
@@ -42,7 +50,7 @@ export default function App() {
   const MainPage = () => {
     return (
       <div>
-        <a href="/"><button className="sep-buttons" id="iep-calculator-link">Hello</button></a>
+        <a href="/iep-calculator"><button className="sep-buttons" id="iep-calculator-link">IEP vs ICEP calculator</button></a>
         <div id="title-section">
           <h1 className="page-title">SEP GUIDE</h1>
         </div>
@@ -100,5 +108,14 @@ export default function App() {
       </div>
     );
   };
-  return <MainPage />;
+
+
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={MainPage} />
+        <Route path="/iep-calculator" component={InitialEnrollment} />
+      </Switch>
+    </Router>
+  )
 }

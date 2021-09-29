@@ -69,7 +69,6 @@ body {
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
   --animate-duration: 2s;
-
 }
 
 #box1 {
@@ -90,6 +89,12 @@ body {
 
 #box5 {
   background: darkgreen;
+}
+
+#iep-calculator-link {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 @keyframes sep-buttons-hover {
   0% {
