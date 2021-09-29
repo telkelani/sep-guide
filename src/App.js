@@ -39,48 +39,66 @@ export default function App() {
     });
   };
 
-  return (
-    <div>
-      <div id="title-section">
-        <h1 className="page-title">SEP GUIDE</h1>
-      </div>
-      <div className="sep-group">
-        {SEPs.map((SEP) => (
-          <button
-            type="button"
-            className="sep-buttons"
-            onClick={(e) => selectSEP(e)}
-          >
-            {SEP.code}
-          </button>
-        ))}
+  const MainPage = () => {
+    return (
+      <div>
+        <a href="/"><button className="sep-buttons" id="iep-calculator-link">Hello</button></a>
+        <div id="title-section">
+          <h1 className="page-title">SEP GUIDE</h1>
+        </div>
+        <div className="sep-group">
+          {SEPs.map((SEP) => (
+            <button
+              type="button"
+              className="sep-buttons"
+              onClick={(e) => selectSEP(e)}
+            >
+              {SEP.code}
+            </button>
+          ))}
 
-        <SEPModal
-          SEP={selectedSEP}
-          showModal={showModal}
-          closeModal={closeModal}
-        />
+          <SEPModal
+            SEP={selectedSEP}
+            showModal={showModal}
+            closeModal={closeModal}
+          />
         </div>
 
         <h1 id="hierarchy-title">SEP Hierarchy</h1>
         <div className="hierarchy">
-          <div className="animate__animated animate__swing hierarchy-box" id="box1">
+          <div
+            className="animate__animated animate__swing hierarchy-box"
+            id="box1"
+          >
             1. IEP
           </div>
-          <div className="animate__animated animate__swing hierarchy-box" id="box2">
+          <div
+            className="animate__animated animate__swing hierarchy-box"
+            id="box2"
+          >
             2. (MA)OEP/OEP-New
           </div>
-          <div className="animate__animated animate__swing hierarchy-box" id="box3">
+          <div
+            className="animate__animated animate__swing hierarchy-box"
+            id="box3"
+          >
             3. SEP
           </div>
-          <div className="animate__animated animate__swing hierarchy-box" id="box4">
+          <div
+            className="animate__animated animate__swing hierarchy-box"
+            id="box4"
+          >
             4. AEP
           </div>
-          <div className="animate__animated animate__swing hierarchy-box" id="box5">
+          <div
+            className="animate__animated animate__swing hierarchy-box"
+            id="box5"
+          >
             5. OEP-I
           </div>
         </div>
-      
-    </div>
-  );
+      </div>
+    );
+  };
+  return <MainPage />;
 }
