@@ -1,60 +1,41 @@
 import React, { useRef, useState } from 'react';
 import DatePicker from 'react-datepicker';
+import ShowResult from './ShowResult.js';
 import 'react-datepicker/dist/react-datepicker.css';
 import './IEP.css';
 
 function InitialEnrollment() {
+  //Dates as states (this works with the react-datepicker)
   var [partA, setPartA] = useState(null);
   var [partB, setPartB] = useState(null);
   var [partD, setPartD] = useState(null);
-  var [today, setToday] = useState(new Date());
-  var MARadio = useRef();
-  var MAPDRadio = useRef();
-  var PDPRadio = useRef();
+  var [today, setToday] = useState(new Date()); //default day is today
 
+  //Records which radio button is checked
   var [MAChecked, setMAChecked] = useState(false);
   var [MAPDChecked, setMAPDChecked] = useState(true);
   var [PDPChecked, setPDPChecked] = useState(false);
-  var [result, setResult] = useState(null);
 
-  const ShowResult = () => {
-    const resultStyle = {
-      color: 'red',
-    };
+  var [result, setResult] = useState(null); //result sep.
 
-    if (result == null) {
-      return null;
-    }
-
-    if (result == 'IEP 🎉' || result == 'ICEP 🎉') {
-      resultStyle.color = '#00fc43'; //green
-    } else if (result == 'Check for SEP 😳') {
-      resultStyle.color = '#eba836'; //yellow
-    } else {
-      resultStyle.color = '#f23400'; //red
-    }
-    return (
-      <div className="result-container">
-        <h1 style={resultStyle}>{result}</h1>
-      </div>
-    );
-  };
-
+  //Function which calculates the 3-1-3 period, based on the partB date and the current Date
+  //The partD date is also passed into here for delayed partB and PDP plan
   const threeOneThree = (today, partB) => {
-    let valid = false;
+    let valid = false; //This is true if the current date is within IEP/ICEP
 
     let monthDiff = partB.getUTCMonth() - today.getUTCMonth(); //Difference in Months
     let sameYear = today.getUTCFullYear() == partB.getUTCFullYear();
     let todayYearAfterB = today.getUTCFullYear() == partB.getUTCFullYear() + 1;
     let todayYearBeforeB = today.getUTCFullYear() == partB.getUTCFullYear() - 1;
 
+    //If it is in the same year then its +-3 years
     if (sameYear) {
       if (Math.abs(monthDiff) <= 3) {
         valid = true;
       }
     }
 
-    //Overlap on end of year (part B month Oct - Dec)
+    //Overlap on end of year (part B month Oct - Dec) e.g. Dec should have IEP  Sep - Dec - Mar
     else if (partB.getUTCMonth() >= 9) {
       if (todayYearAfterB) {
         console.log(monthDiff);
@@ -64,7 +45,7 @@ function InitialEnrollment() {
       }
     }
 
-    //Overlap on the beginning of year (partB month Jan - Mar)
+    //Overlap on the beginning of year (partB month Jan - Mar)  Jan should have IEP oct - jan - apr
     else if (partB.getUTCMonth() <= 2) {
       if (todayYearBeforeB) {
         if (Math.abs(monthDiff) <= 11 && Math.abs(monthDiff) >= 9) {
@@ -75,6 +56,7 @@ function InitialEnrollment() {
     return valid;
   };
 
+  //For delayed part B, the ICEP is 3 months before
   const threeMonthsPrior = () => {
     let valid = false;
     let monthDiff = partB.getUTCMonth() - today.getUTCMonth();
@@ -96,6 +78,7 @@ function InitialEnrollment() {
     return valid;
   };
 
+  //Sets result for based on input
   const isIEPorICEP = () => {
     //Validation
     if (partA != null && partB != null) {
@@ -170,6 +153,9 @@ function InitialEnrollment() {
 
   return (
     <div>
+      <a href="/">
+        <button className="sep-buttons">Back To home page</button>
+      </a>
       <div className="iep-title-container">
         <h2>IEP/ICEP Calculator</h2>
       </div>
@@ -237,7 +223,6 @@ function InitialEnrollment() {
             id="MA"
             type="radio"
             name="plan-type"
-            ref={MARadio}
             onClick={() => {
               setMAChecked(true);
               setMAPDChecked(false);
@@ -252,7 +237,6 @@ function InitialEnrollment() {
             id="MAPD"
             type="radio"
             name="plan-type"
-            ref={MAPDRadio}
             checked={MAPDChecked}
             onChange={() => {
               setMAChecked(false);
@@ -268,7 +252,6 @@ function InitialEnrollment() {
             id="PDP"
             type="radio"
             name="plan-type"
-            ref={PDPRadio}
             onClick={() => {
               setMAChecked(false);
               setMAPDChecked(false);
@@ -283,8 +266,8 @@ function InitialEnrollment() {
           Submit
         </button>
       </div>
-      <ShowResult />
-{/* 
+      <ShowResult result={result} />
+      {/* 
       <div
         style={{
           display: 'flex',
