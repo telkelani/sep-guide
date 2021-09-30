@@ -68,6 +68,8 @@ body {
   font-size: medium;
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
+  display: flex;
+  justify-content: center;
   --animate-duration: 2s;
 }
 
